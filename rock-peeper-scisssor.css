@@ -120,9 +120,16 @@ footer{
 }
 
 @media only screen and (max-width: 400px) {
+  body{
+    margin: auto;
+    /* background-color: rgb(200, 203, 205); */
+    background-image: url(img-2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
   .container {
     grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 0.5fr 0.4fr 0.8fr 0.2fr;
+  grid-template-rows: 0.3fr 0.8fr 0.4fr 0.8fr 0.2fr;
   grid-template-areas: 
   "header header header"
   "mid-text mid-text mid-text"
@@ -133,6 +140,7 @@ footer{
   }
   .header{
     font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.8);
   }
   .mid-text{
     font-size: 24px;
@@ -154,9 +162,11 @@ footer{
     grid-area: footer;    
   }
   .text1{
+    color: rgb(255, 255, 255);
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.682);
   }
   .text2{
+    color: white;
     font-family: Arial;
     text-shadow: 10px 10px 10px rgb(0, 0, 0);
   }
@@ -165,7 +175,7 @@ footer{
   height: 90px;
   font-size: 24px;
   width: 90%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.7);
   }
   .button1{
     margin-left: 8%;
