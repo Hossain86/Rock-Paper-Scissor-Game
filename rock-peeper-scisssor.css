@@ -1,12 +1,15 @@
 body{
   margin: auto;
-  background-color: rgb(200, 203, 205);
+  /* background-color: rgb(200, 203, 205); */
+  background-image: url(img.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .container{
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 0.5fr 0.4fr 1.2fr 0.6fr;
+  grid-template-columns: 1fr 0.6fr 1fr;
+  grid-template-rows: 0.3fr 0.4fr 0.3fr 0.8fr 0.4fr;
   grid-template-areas: 
   "header header header"
   "mid-text mid-text mid-text"
@@ -22,16 +25,16 @@ body{
   text-align: center; 
   font-weight: bold;
   width: 100%; 
-  border: 1px solid #0b0b0b; 
+  border: 0px solid #0b0b0b; 
   color: white;
-  background-color: rgb(28, 28, 28)
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .mid-text{
   grid-area: mid-text;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center; 
-  font-weight: bold;
+  font-weight: bold; 
   line-height: 50px;
 }
 .mid-text2{
@@ -51,29 +54,50 @@ body{
 }
 footer{
   grid-area: footer;
+  margin-top: 80px;
+  margin-left: 5px;
 }
-.button1,.button2,.button3{
+.saiyan{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.button1,.button3{
   margin-top: 50px;
-  width: 60%;
-  height: 60%;
-  font-size: 150%;
+  width: 35%;
+  height: 120px;
+  font-size: 180%;
   font-family: Arial;
   font-weight: bold;
   color: white;
-  background-color: rgb(50, 50, 50);
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 20px;
+  cursor: pointer;
+  transition:box-shadow 0.15s;
+  box-shadow: 10px 10px 10px rgba(47, 46, 46, 0.668);
+}
+.button1{
+ margin-left: 65%;
+}
+.button2{
+  margin-left: 22%;
+  margin-top: 50px;
+  width: 55%;
+  height: 120px;
+  font-size: 180%;
+  font-family: Arial;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.85);
   border-radius: 20px;
   cursor: pointer;
   transition:box-shadow 0.15s;
   box-shadow: 10px 10px 10px rgba(108, 107, 107, 0.6);
 }
-.button1{
-  margin-left: 40%;
-}
-.button2{
-  margin-left: 20%;
-}
 .button3{
-  margin-left: 0%;
+  margin-left: 0;
 }
 .button1:hover{
   opacity: 0.9;
@@ -94,82 +118,11 @@ footer{
 .button3:active{
   opacity: 0.4;
 }
-/* 
-.text {
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center; 
-  font-weight: bold;
-  line-height: 60px; 
-  height: 80px; 
-  border: 1px solid #0b0b0b; 
-  margin: 0 auto;
-  color: white;
-  background-color: rgb(43, 43, 43)
-  
-}
-.text1{
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center; 
-  font-weight: bold;
-  line-height: 60px; 
-  height: 60px; 
-}
-.text2{
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center; 
-  
-}
-.button1{
-  grid-area: button1;
-}
-.button2{
-  grid-area: button2;
-}
-.button3{
-  grid-area: button3;
-}
-.button1:hover{
-  opacity: 0.9;
-}
-.button2:hover{
-  opacity: 0.9;
-}
-.button3:hover{
-  opacity: 0.9;
-}
 
-.button1:active{
-  opacity: 0.4;
-}
-.button2:active{
-  opacity: 0.4;
-}
-.button3:active{
-  opacity: 0.4;
-}
-.button1,.button2,.button3{
-  margin-top: 50px;
-  width: 200px;
-  height: 150px;
-  font-size: 30px;
-  font-family: Arial;
-  font-weight: bold;
-  color: white;
-  background-color: rgb(50, 50, 50);
-  border-radius: 10px;
-  cursor: pointer;
-  transition:box-shadow 0.15s;
-  box-shadow: 10px 10px 10px rgba(108, 107, 107, 0.6);
-}
-*/
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 400px) {
   .container {
     grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 0.5fr 0.4fr 0.8fr 0.6fr;
+  grid-template-rows: 0.3fr 0.5fr 0.4fr 0.8fr 0.2fr;
   grid-template-areas: 
   "header header header"
   "mid-text mid-text mid-text"
@@ -179,13 +132,14 @@ footer{
   grid-gap: .3rem;
   }
   .header{
-    font-size: 22px;
+    font-size: 24px;
   }
   .mid-text{
-    font-size: 18px;
+    font-size: 24px;
   }
   .mid-text2{
-    font-size: 16px;
+    font-size: 18px;
+    
   }
   .fbutton{
     grid-area: fbutton;
@@ -197,14 +151,21 @@ footer{
     grid-area: tbutton;
   }
   footer{
-    grid-area: footer;
+    grid-area: footer;    
+  }
+  .text1{
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.682);
+  }
+  .text2{
+    font-family: Arial;
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
   }
   .button1, .button2, .button3 {
-  margin-top: 10%;
+  margin-top: 20px;
   height: 90px;
-  font-size: 130%;
+  font-size: 24px;
   width: 90%;
-    
+  background-color: rgba(0, 0, 0, 0.85);
   }
   .button1{
     margin-left: 8%;
