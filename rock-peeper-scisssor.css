@@ -1,7 +1,7 @@
 body{
   margin: auto;
   /* background-color: rgb(200, 203, 205); */
-  background-image: url(img.jpg);
+  background-image: url(img.png);
   background-position: center;
   background-size: cover;
 }
