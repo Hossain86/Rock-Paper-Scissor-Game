@@ -2,15 +2,106 @@ body{
   margin: auto;
   background-color: rgb(200, 203, 205);
 }
+.container{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.5fr 0.4fr 1.2fr 0.6fr;
+  grid-template-areas: 
+  "header header header"
+  "mid-text mid-text mid-text"
+  "mid-text2 mid-text2 mid-text2"
+  "fbutton sbutton tbutton"
+  "footer footer footer";
+  grid-gap: .3rem;
+}
+.header{
+  grid-area: header;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; 
+  font-weight: bold;
+  width: 100%; 
+  border: 1px solid #0b0b0b; 
+  color: white;
+  background-color: rgb(28, 28, 28)
+}
+.mid-text{
+  grid-area: mid-text;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; 
+  font-weight: bold;
+  line-height: 50px;
+}
+.mid-text2{
+  grid-area: mid-text2;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; 
+}
+.fbutton{
+  grid-area: fbutton;
+}
+.sbutton{
+  grid-area: sbutton;
+}
+.tbutton{
+  grid-area: tbutton;
+}
+footer{
+  grid-area: footer;
+}
+.button1,.button2,.button3{
+  margin-top: 50px;
+  width: 60%;
+  height: 60%;
+  font-size: 150%;
+  font-family: Arial;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(50, 50, 50);
+  border-radius: 20px;
+  cursor: pointer;
+  transition:box-shadow 0.15s;
+  box-shadow: 10px 10px 10px rgba(108, 107, 107, 0.6);
+}
+.button1{
+  margin-left: 40%;
+}
+.button2{
+  margin-left: 20%;
+}
+.button3{
+  margin-left: 0%;
+}
+.button1:hover{
+  opacity: 0.9;
+}
+.button2:hover{
+  opacity: 0.9;
+}
+.button3:hover{
+  opacity: 0.9;
+}
+
+.button1:active{
+  opacity: 0.4;
+}
+.button2:active{
+  opacity: 0.4;
+}
+.button3:active{
+  opacity: 0.4;
+}
+/* 
 .text {
-  display: block;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center; 
   font-weight: bold;
   line-height: 60px; 
   height: 80px; 
-  width: 100%; 
   border: 1px solid #0b0b0b; 
   margin: 0 auto;
   color: white;
@@ -18,24 +109,27 @@ body{
   
 }
 .text1{
-  display: block;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center; 
   font-weight: bold;
   line-height: 60px; 
   height: 60px; 
-  width: 100%; 
 }
 .text2{
-  display: block;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center; 
   
 }
 .button1{
-  margin-left: 28%;
+  grid-area: button1;
+}
+.button2{
+  grid-area: button2;
+}
+.button3{
+  grid-area: button3;
 }
 .button1:hover{
   opacity: 0.9;
@@ -57,11 +151,9 @@ body{
   opacity: 0.4;
 }
 .button1,.button2,.button3{
-  margin-top: 100px;
+  margin-top: 50px;
   width: 200px;
   height: 150px;
-  margin-right: 30px;
-  display: inline-block;
   font-size: 30px;
   font-family: Arial;
   font-weight: bold;
@@ -71,4 +163,56 @@ body{
   cursor: pointer;
   transition:box-shadow 0.15s;
   box-shadow: 10px 10px 10px rgba(108, 107, 107, 0.6);
+}
+*/
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.5fr 0.4fr 0.8fr 0.6fr;
+  grid-template-areas: 
+  "header header header"
+  "mid-text mid-text mid-text"
+  "mid-text2 mid-text2 mid-text2"
+  "fbutton sbutton tbutton"
+  "footer footer footer";
+  grid-gap: .3rem;
+  }
+  .header{
+    font-size: 22px;
+  }
+  .mid-text{
+    font-size: 18px;
+  }
+  .mid-text2{
+    font-size: 16px;
+  }
+  .fbutton{
+    grid-area: fbutton;
+  }
+  .sbutton{
+    grid-area: sbutton;
+  }
+  .tbutton{
+    grid-area: tbutton;
+  }
+  footer{
+    grid-area: footer;
+  }
+  .button1, .button2, .button3 {
+  margin-top: 10%;
+  height: 90px;
+  font-size: 130%;
+  width: 90%;
+    
+  }
+  .button1{
+    margin-left: 8%;
+  }
+  .button2{
+    margin-left: 4%;
+  }
+  .button3{
+    margin-left: 1%;
+  }
 }
